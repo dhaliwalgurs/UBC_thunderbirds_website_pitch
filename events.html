@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+    <title> UBC Thunderbirds Quidditch</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        $(window).bind('scroll', function() {
+            if ($(window).scrollTop() > 100000) {
+                $(".navigation").hide();
+            }
+            else if ($(window).scrollTop() < 20) {
+                $('.navigation').css('background-color', 'rgba(255, 255, 255, 0.9)');
+                $('.dropdown').css('color', 'rgba(20, 33, 61, 0.9)');
+                $('.homeButton').css('background', 'rgba(20, 33, 61, 0.9)');
+                $('.homeButton').css('color', 'rgba(255, 255, 255, 0.9)');
+                $('.homeButton2').css('color','#14213D');
+                $("#logo").show();
+                $(".navigation").show();
+            }
+            else {
+                $('.navigation').css('background-color', 'rgba(20, 33, 61, 0.9)');
+                $('.dropdown').css('color', 'rgba(255, 255, 255, 0.9)');
+                $('.homeButton').css('background', 'rgba(255, 255, 255, 0.9)');
+                $('.homeButton').css('color', 'rgba(20, 33, 61, 0.9)');
+                $('.homeButton2').css('color', 'rgba(255, 255, 255, 0.9)');
+                $("#logo").hide();
+                $(".navigation").show();
+
+
+            }
+        })
+
+
+        $(document).ready(function(){
+            $('#MyButton').click(function(){
+                CapacityChart();
+            });
+        });
+
+
+    </script>
+    <style>
+        * {
+        }
+
+        body {
+            background-color: #FFF;
+            margin: 0;
+            padding: 0;
+        }
+        #cover {
+            height: 900px;
+            position: relative;
+            top: -55px;
+            width: 100%;
+            background: url("http://livehdwallpaper.com/wp-content/uploads/2016/08/Cougar-in-winter-Wallpapers-HD-Pictures.jpg") no-repeat top center;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+
+        .navigation {
+            background-color: rgba(255, 255, 255, 0.9);
+            position: fixed;
+            left: 0;
+            top: 0;
+            text-align: center;
+            width: 100%;
+            z-index: 10000;
+        }
+
+        .navigationv2 {
+            background-color: rgba(20, 27, 185, 0.9);
+            position: fixed;
+            left: 0;
+            top: 0;
+            text-align: center;
+            width: 100%;
+            z-index: 10000;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            color: #14213D;
+            display: inline-block;
+            font-family: 'Abel', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 16px 20px;
+            text-transform: uppercase;
+        }
+
+        #logo {
+            color: #FCA311;
+            font-family: Impact, Charcoal, sans-serif;
+            font-size: 40px;
+            padding: 0px 50px;
+        }
+
+        .cover-content {
+            box-sizing: border-box;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            top: 280px;
+            width: 70%;
+        }
+
+        h1 {
+            color: #FFF;
+            font-family: 'Raleway', sans-serif;
+            font-size: 50px;
+            line-height: 60px;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        h3 {
+            color: #14213D;
+            font-family: 'Abel', sans-serif;
+            font-size: 28px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            color: #FCA311;
+            font-family: 'Abel', sans-serif;
+            font-size: 24px;
+            margin: 0px 0px 50px 0px;
+        }
+
+        p {
+            color: #333;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn {
+            background-color: #14213D;
+            color: #FFF;
+            font-family: 'Amatic SC', cursive;
+            font-size: 26px;
+            padding: 14px;
+        }
+
+        .events {
+            background: #EEEFF1;
+            box-sizing: border-box;
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px 0px;
+            text-align: center;
+        }
+
+        .event {
+            display: inline-block;
+            margin: 0px 2% 80px 2%;
+            text-align: center;
+            width: 45%;
+            height: 20%;
+        }
+
+        .event2 {
+            display: inline-block;
+            margin: 0px 2% 80px 2%;
+            text-align: center;
+            width: 45%;
+            height: 20%;
+            background-color: #ba140b;
+        }
+
+        .event img {
+            width: 100%;
+            height: 50%;
+        }
+        .event2 img {
+            width: 100%;
+            height: 50%;
+        }
+
+        .blue {
+            color: #14213D;;
+        }
+
+        .myButton {
+            background-color:#14213D;;
+            text-color: #14213D;
+            -moz-border-radius:28px;
+            -webkit-border-radius:28px;
+            border-radius:28px;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:17px;
+            padding:16px 31px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #2f6627;
+            opacity: 0.9;
+        }
+        .myButton:hover {
+
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+
+        .dropdown {
+            color: #14213D;
+            display: inline-block;
+            font-family: 'Abel', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0px 20px;
+            text-transform: uppercase;
+            border: white;
+
+            position: relative;
+            display: inline-block;
+            z-index: 10;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            text-align:center;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 0px 16px;
+            z-index: 10;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            z-index: 10;
+
+        }
+
+        .dropdownlist:hover {
+            display: block;
+            opacity: 0.70;
+            z-index: 10;
+
+        }
+
+        .homeButton {
+            background-color:#14213D;;
+            -moz-border-radius:28px;
+            -webkit-border-radius:28px;
+            border-radius:28px;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family: 'Abel', sans-serif;
+            font-size:16px;
+            padding:0px 31px;
+            text-decoration:none;
+
+            opacity: 0.9;
+        }
+        .homeButton2 {
+            background-color: transparent;
+            -moz-border-radius:28px;
+            -webkit-border-radius:28px;
+            border-radius:28px;
+            display:inline-block;
+            cursor:pointer;
+            color:#14213D;
+            font-family: 'Abel', sans-serif;
+            font-size:16px;
+            padding:0px 31px;
+            text-decoration:none;
+
+            opacity: 0.9;
+        }
+
+        .copyright{
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<div draggable="true" class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px; top:100px;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+</div>
+
+
+<div class="navigation">
+    <a href="index.html" id="logo">UBC Thunderbirds Quidditch</a>
+    <ul>
+        <div class="dropdown">
+            <a href="index.html" class="homeButton2">Home</a>
+        </div>
+        <div class="dropdown">
+            <a href="teams.html" class="homeButton2" id="teams"><span>Teams</span></a>
+            <div class="dropdown-content">
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">UBC Thunderbirds SC</a></li>
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">UBC Quidditch Club</a></li>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="join.html" class="homeButton2" id="join"><span>Join</span></a>
+            <div class="dropdown-content">
+                <li class="dropdownlist"><a href="http://www.ubcquidditch.com/join.html">How Can I Join</a></li>
+                <li class="dropdownlist"><a href="http://www.ubcquidditch.com/join.html">Is It Too Late to Join?</a></li>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="events.html" class="homeButton" id="events"><span>Events</span></a>
+            <div class="dropdown-content">
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">Upcoming Events</a></li>
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">Schedule</a></li>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="gallery.html" class="homeButton2" id="gallery"><span>Gallery</span></a>
+            <div class="dropdown-content">
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">Photo Gallery</a></li>
+                <li class="dropdownlist"><a href="http://www.ubcquidditch.com/videos.html">Video Gameplay</a></li>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="store.html" class="homeButton2" id="store"><span>Store</span></a>
+            <div class="dropdown-content">
+                <li class="dropdownlist"><a href="http://www.ubcquidditch.com/merch.html">Merchandise</a></li>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="aboutus.html" class="homeButton2" id="aboutus"><span>About Us</span></a>
+            <div class="dropdown-content">
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">Meet the Exec Team</a></li>
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">Captains</a></li>
+                <li class="dropdownlist"><a href="http://www.fullredneck.com/wp-content/uploads/2016/04/Funny-Russia-Meme-20.jpg">Contact Us</a></li>
+            </div>
+        </div>
+    </ul>
+</div>
+
+<div id="cover">
+    <div class="cover-content">
+        <h1>Upcoming Events for Club Members </h1>
+        <h2>see the full list of events we have lined up</h2><br>
+        <a href="http://www.ubcquidditch.com/" class="myButton">Retired Site</a>
+    </div>
+</div>
+
+<div class="events">
+    <h3 class="blue">Events</h3>
+
+    <div class="event2">
+        <img src="http://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2015/11/harry-potter-dancing-1448221941.gif?quality=.8&height=180&width=245">
+        <h3>Annual Yule Ball</h3>
+        <p>It's that time again! UBC Quidditch is hosting its third annual Yule Ball Event as a fundraiser for World Cup
+            and regionals! This year our event will be all ages, so ickle firsties are welcome! The night will start out
+            with some waltzing, PHOTOBOOTHING (new this year!), and socializing all under a bed of floating candles that
+            will gradually descend into a festive rave!<br><br></p>
+        <h4>20 January 2017 </h4>
+    </div><br>
+
+    <div class="event2">
+        <img src="http://images.wisegeek.com/man-lifting-weights-in-gym-with-a-smile-on-his-face.jpg">
+        <h3>Bird Coop Weights</h3>
+        <p>Entirely optional workout!<br><br><br><br><br><br></p>
+        <h4>8 January 2017</h4>
+    </div><br>
+
+    <div class="event2">
+        <img src="https://s28.postimg.org/5wbds4ux9/12525616_683097231832351_7688903786731069130_o.jpg">
+        <h3>TSC Practice</h3>
+        <p>No stress. Entirely optional!<br><br><br><br><br><br><br><br></p>
+        <h4>8 January 2017</h4>
+    </div><br>
+
+    <div class="event2">
+        <img src="http://wksglobal.cafe24.com/wp-content/uploads/2015/01/university-backpack-91.jpg">
+        <h3>Start Term Two</h3>
+        <p> Welcome back from your winter holidays! Hopefully you are feeling
+            well rested. We look forward to seeing everyone
+            out at practice this coming weekend. Keep posted for upcoming events. </p><br><br><br><br>
+        <h4>3 January 2017</h4>
+    </div><br>
+    <p><a href="http://www.ubcquidditch.com/">archive</a></p>
+</div>
+
+
+
+
+
+<div class="events">
+    <h3 class="blue">Gallery</h3>
+    <div class="event">
+        <img src="">
+        <h3>Photo Gallery</h3>
+        <p></p>
+        <h4>2016 - 2017 </h4>
+    </div>
+
+    <div class="event">
+        <img src="">
+        <h3>Video Gameplay</h3>
+        <p></p>
+        <h4>2016 - 2017</h4>
+    </div>
+    <div class="event">
+        <img src="">
+        <h3>Photo Gallery</h3>
+        <p></p>
+        <h4>2015 - 2016 </h4>
+    </div>
+
+    <div class="event">
+        <img src="">
+        <h3>Video Gameplay</h3>
+        <p></p>
+        <h4>2015 - 2016</h4>
+    </div>
+</div>
+
+
+
+
+
+<div class="events">
+    <h3 class="blue">Teams</h3>
+    <div class="event">
+        <img src="">
+        <h3>UBC Thunderbirds SC</h3>
+        <p></p>
+        <a href="#" class="myButton">Roster</a>
+    </div>
+
+    <div class="event">
+        <img src="">
+        <h3>UBC Quidditch Club</h3>
+        <p></p>
+        <a href="#" class="myButton">Roster</a>
+    </div>
+
+</div>
+
+<h3>Vancouver born and bred</h3>
+
+
+
+<p class="copywright">   &copy; 2017 Gchien Industries.Inc<p>
+
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+* {
+}
+
+body {
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+#cover {
+    height: 900px;
+    position: relative;
+    top: -55px;
+    width: 100%;
+    background: url("http://static.ubyssey.ca/media/images/2015/10/_20151008_-5.jpg") no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.navigation {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 10000;
+}
+
+.navigationv2 {
+    background-color: rgba(20, 27, 185, 0.9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 10000;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    color: #14213D;
+    display: inline-block;
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 16px 20px;
+    text-transform: uppercase;
+}
+
+#logo {
+    color: #FCA311;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    padding: 0px 50px;
+}
+
+.cover-content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 280px;
+    width: 70%;
+}
+
+h1 {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    line-height: 60px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+h3 {
+    color: #14213D;
+    font-family: 'Abel', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #FCA311;
+    font-family: 'Abel', sans-serif;
+    font-size: 24px;
+    margin: 0px 0px 50px 0px;
+}
+
+p {
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #14213D;
+    color: #FFF;
+    font-family: 'Amatic SC', cursive;
+    font-size: 26px;
+    padding: 14px;
+}
+
+.events {
+    background: #EEEFF1;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.event {
+    display: inline-block;
+    margin: 0px 2% 80px 2%;
+    text-align: center;
+    width: 45%;
+    height: 20%;
+}
+
+.event2 {
+    display: inline-block;
+    margin: 0px 2% 80px 2%;
+    text-align: center;
+    width: 45%;
+    height: 20%;
+    background-color: #ba140b;
+}
+
+.event img {
+    width: 100%;
+    height: 50%;
+}
+.event2 img {
+    width: 100%;
+    height: 50%;
+}
+
+.blue {
+    color: #14213D;;
+}
+
+.myButton {
+    background-color:#14213D;;
+    text-color: #14213D;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+    opacity: 0.9;
+}
+.myButton:hover {
+
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.dropdown {
+    color: #14213D;
+    display: inline-block;
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0px 20px;
+    text-transform: uppercase;
+    border: white;
+
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align:center;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0px 16px;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 10;
+
+}
+
+.dropdownlist:hover {
+    display: block;
+    opacity: 0.70;
+    z-index: 10;
+
+}
+
+.homeButton {
+    background-color:#14213D;;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: 'Abel', sans-serif;
+    font-size:16px;
+    padding:0px 31px;
+    text-decoration:none;
+
+    opacity: 0.9;
+}
+.homeButton2 {
+    background-color: transparent;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#14213D;
+    font-family: 'Abel', sans-serif;
+    font-size:16px;
+    padding:0px 31px;
+    text-decoration:none;
+
+    opacity: 0.9;
+}
+
+.copyright{
+    text-align: center;
+}
