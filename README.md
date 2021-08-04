@@ -2,4 +2,4 @@
 
 
 # Description
-A website mock up created as a pitch to build an independent UBC thunderbirds quidditch website.
+A website mock up I created as a pitch to build an independent UBC thunderbirds quidditch site.
